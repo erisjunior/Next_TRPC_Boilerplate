@@ -1,7 +1,13 @@
+# NextJs + TRPC Boilerplate
+
+Boilerplate for projects using NextJs and TRPC with Prisma
+
+The project uses docker and devcontainer to setup the enviroment, using the `Reopen in container` from VSCode DevContainer extension.
+
 ## Getting Started
 
 ```bash
-yarn dev
+yarn
 yarn dev
 ```
 
