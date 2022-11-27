@@ -1,0 +1,25 @@
+{
+  "name": "Boilerplate - Docker Remote Container",
+
+  "dockerComposeFile": ["../docker-compose.yml", "docker-compose.yml"],
+
+  "service": "boilerplate",
+
+  "workspaceFolder": "/boilerplate",
+
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "zsh"
+  },
+
+  "extensions": [
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "donjayamanne.githistory",
+    "Prisma.prisma",
+    "eamodio.gitlens"
+  ],
+
+  "forwardPorts": [3000],
+
+  "postCreateCommand": "yarn"
+}
