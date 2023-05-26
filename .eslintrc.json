@@ -45,6 +45,8 @@
     "@typescript-eslint/no-namespace": "off",
     "@typescript-eslint/no-redeclare": "off",
     "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-dynamic-delete": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",

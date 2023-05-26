@@ -1,28 +1,16 @@
-import Head from 'next/head'
+import type { GetServerSideProps } from 'next'
+import { getSession } from 'next-auth/react'
 
-import { trpc } from '../utils/trpc'
+import { Home } from '~/presentation/pages'
 
-export default function Home() {
-  const hello = trpc.hello.useQuery({ message: 'client' })
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const session = await getSession({ req })
 
-  return (
-    <div>
-      <Head>
-        <title>Boilerplate</title>
-        <meta name='description' content='Boilerplate' />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
-      <main>
-        {!hello.data ? (
-          <p>Loading...</p>
-        ) : (
-          <div>
-            <p>{hello.data.message}</p>
-            <p>{hello.data.usersCount}</p>
-          </div>
-        )}
-      </main>
-    </div>
-  )
+  return {
+    props: {
+      session
+    }
+  }
 }
+
+export default Home

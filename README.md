@@ -2,8 +2,6 @@
 
 Boilerplate for projects using NextJs and TRPC with Prisma
 
-The project uses docker and devcontainer to setup the enviroment, using the `Reopen in container` from VSCode DevContainer extension.
-
 ## Getting Started
 
 ```bash
@@ -16,22 +14,27 @@ yarn dev
 #### Development
 
 ```bash
-npx prisma migrate dev
+yarn migration
 ```
 
 #### Production
 
 ```bash
-npx prisma migrate deploy
+yarn migration-prod
 ```
 
 ## Used Technologies
 
+- TypeScript
 - React
 - Next.js
-- TypeScript
 - Tailwind CSS
-- TRPC
+- React Hook Form
+- tRPC
 - Zod
 - Prisma
 - PostgreSQL
+- NextAuth
+- UploadThing
+- Resend
+- T3 Env

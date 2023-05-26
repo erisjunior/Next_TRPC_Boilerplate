@@ -1,7 +1,13 @@
+import './src/application/config/env/index.js'
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const config = {
   reactStrictMode: true,
-  swcMinify: true
+  swcMinify: true,
+  images: { domains: [] },
+  experimental: {
+    esmExternals: false
+  }
 }
 
-module.exports = nextConfig
+export default config
